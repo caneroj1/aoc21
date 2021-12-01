@@ -38,7 +38,7 @@ class Day1 extends Challenge {
       case _ => 0
     }
     calculateValueTailRec(
-      measurements.drop(1),
+      measurements.tail,
       sliceSize,
       Some(currentSum),
       count + increment
