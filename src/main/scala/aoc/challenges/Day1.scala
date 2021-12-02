@@ -3,14 +3,14 @@ package aoc.challenges
 import annotation.tailrec
 
 class Day1 extends Challenge {
-  def part1(input: String): String = {
+  override def part1(input: String): String = {
     val ints = input.linesIterator.map(_.toInt).toArray
     // val result = calculateValue(ints, 1)
     val result = calculateValueTailRec(ints, 1, None, 0)
     result.toString
   }
 
-  def part2(input: String): String = {
+  override def part2(input: String): String = {
     val ints = input.linesIterator.map(_.toInt).toArray
     // val result = calculateValue(ints, 3)
     val result = calculateValueTailRec(ints, 3, None, 0)
