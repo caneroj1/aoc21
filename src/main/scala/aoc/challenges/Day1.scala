@@ -35,7 +35,7 @@ class Day1 extends Challenge {
     val currentSum = slice.sum
     val increment = previousSum match {
       case Some(v) if currentSum > v => 1
-      case _ => 0
+      case _                         => 0
     }
     calculateValueTailRec(
       measurements.tail,

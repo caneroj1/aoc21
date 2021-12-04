@@ -16,9 +16,12 @@ class Day3 extends Challenge {
         }
       }
     )
-    val gammaBits = counters.map(c => if (c.oneCount > c.zeroCount) '1' else '0').mkString
-    val epsilonBits = counters.map(c => if (c.oneCount > c.zeroCount) '0' else '1').mkString
-    val result = Integer.parseUnsignedInt(gammaBits, 2) * Integer.parseUnsignedInt(epsilonBits, 2)
+    val gammaBits =
+      counters.map(c => if (c.oneCount > c.zeroCount) '1' else '0').mkString
+    val epsilonBits =
+      counters.map(c => if (c.oneCount > c.zeroCount) '0' else '1').mkString
+    val result = Integer.parseUnsignedInt(gammaBits, 2) * Integer
+      .parseUnsignedInt(epsilonBits, 2)
     result.toString
   }
 
